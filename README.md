@@ -63,6 +63,18 @@ cd Frontend
 npm install
 ```
 
+**Configure API Keys** - Open `Frontend/.env` file and paste your API keys:
+```env
+VITE_GEMINI_API_KEY=your_gemini_api_key_here
+VITE_UNSPLASH_ACCESS_KEY=your_unsplash_key_here
+```
+
+📍 **Where to get API keys:**
+- **Gemini API**: https://aistudio.google.com/app/apikey
+- **Unsplash API**: https://unsplash.com/developers (optional)
+
+💡 **Tip**: The `.env` file is already created in `Frontend/.env` - just open it and paste your keys!
+
 ## 🏃 Running the Application
 
 ### Start Backend (Terminal 1)
