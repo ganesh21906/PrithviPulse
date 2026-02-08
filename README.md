@@ -1,5 +1,7 @@
 # PrithviPulse - AI-Powered Farm Disease Diagnosis
 
+> 🏆 **Built for Gemini API Developer Competition** - Showcasing Google Gemini's vision capabilities for agricultural disease detection
+
 A full-stack agricultural AI application that diagnoses plant diseases using hybrid cloud + local AI models with guaranteed uptime.
 
 ## 🌾 Features
@@ -28,8 +30,8 @@ A full-stack agricultural AI application that diagnoses plant diseases using hyb
 - **NumPy** - Numerical computing
 
 ### AI Models
-- **Google Gemini 3 Vision** - Cloud-based vision AI
-- **plant_disease_model.h5** - Local 38-class CNN (fallback)
+- **Google Gemini 3 Vision** - Primary AI for disease detection (Gemini Hackathon)
+- **plant_disease_model.h5** - Local 38-class CNN (fallback when offline)
 
 ## 📋 Prerequisites
 
@@ -63,15 +65,13 @@ cd Frontend
 npm install
 ```
 
-**Configure API Keys** - Open `Frontend/.env` file and paste your API keys:
+**Configure API Keys** - Open `Frontend/.env` file and paste your API key:
 ```env
 VITE_GEMINI_API_KEY=your_gemini_api_key_here
-VITE_UNSPLASH_ACCESS_KEY=your_unsplash_key_here
 ```
 
-📍 **Where to get API keys:**
-- **Gemini API**: https://aistudio.google.com/app/apikey
-- **Unsplash API**: https://unsplash.com/developers (optional)
+📍 **Where to get API key:**
+- **Gemini API**: https://aistudio.google.com/app/apikey (Required for Gemini Hackathon)
 
 💡 **Tip**: The `.env` file is already created in `Frontend/.env` - just open it and paste your keys!
 
@@ -184,9 +184,10 @@ Response:
 
 - **Text-to-Speech**: Hear treatment instructions
 - **Progress Tracking**: Track completed treatment steps
-- **Dynamic Images**: Unsplash API integration for farm context
+- **Visual Treatment Guide**: Interactive step-by-step UI with icons
 - **Safety Warnings**: Auto-detect chemical treatments
 - **Responsive Design**: Works on desktop and mobile
+- **Powered by Gemini**: Built for Gemini API Developer Competition
 
 ## 🧪 Testing
 

@@ -64,8 +64,8 @@ const getActionImageUrl = (action: string, icon: string): string => {
 
   const searchTerm = searchTerms[action.toUpperCase()] || 'farming-agriculture';
   
-  // Using Unsplash API for dynamic images
-  return `https://source.unsplash.com/150x150/?${searchTerm},farm`;
+  // Using static placeholder for images (hackathon-friendly)
+  return `https://via.placeholder.com/150x150/10b981/ffffff?text=${action.charAt(0)}`;
 };
 
 // Get background color for step badge based on step number

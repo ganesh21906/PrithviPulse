@@ -48,7 +48,6 @@ Create a `.env` file in the Frontend directory:
 ```env
 # API Keys
 VITE_GEMINI_API_KEY=your_gemini_api_key_here
-VITE_UNSPLASH_ACCESS_KEY=your_unsplash_key_here
 VITE_WEATHER_API_KEY=your_weather_key_here
 VITE_MAPS_API_KEY=your_maps_key_here
 
@@ -63,7 +62,6 @@ VITE_FRONTEND_URL=https://prithvipulse.com
 import { API_KEYS } from '../services/api';
 
 const geminiKey = API_KEYS.gemini;
-const unsplashKey = API_KEYS.unsplash;
 ```
 
 ### Helper Functions

@@ -1,13 +1,13 @@
 /**
  * Smart Image Mapper for PrithviPulse
- * Provides high-quality, verified Unsplash images for all farming activities and crops
- * All URLs are tested and optimized for performance
+ * Provides high-quality, verified farm images for all farming activities and crops
+ * All image URLs are optimized for performance
  */
 
 /**
- * Maps farming keywords to high-quality Unsplash images
+ * Maps farming keywords to high-quality farm images
  * @param keyword - Activity, crop, or farming term
- * @returns Optimized Unsplash image URL
+ * @returns Optimized image URL from CDN
  */
 export const getSmartImage = (keyword: string): string => {
   if (!keyword) return getDefaultImage();

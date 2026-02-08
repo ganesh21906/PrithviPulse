@@ -44,7 +44,6 @@ export const API_ENDPOINTS = {
 // API Keys (from environment variables)
 export const API_KEYS = {
   gemini: import.meta.env.VITE_GEMINI_API_KEY || '',
-  unsplash: import.meta.env.VITE_UNSPLASH_ACCESS_KEY || '',
   weather: import.meta.env.VITE_WEATHER_API_KEY || '',
   maps: import.meta.env.VITE_MAPS_API_KEY || ''
 } as const;

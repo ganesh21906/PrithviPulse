@@ -19,11 +19,8 @@ PrithviPulse/Frontend/.env
 
 The file looks like this:
 ```env
-# Google Gemini AI API Key
+# Google Gemini AI API Key (Required for Gemini Hackathon)
 VITE_GEMINI_API_KEY=
-
-# Unsplash API Key (for images)
-VITE_UNSPLASH_ACCESS_KEY=
 
 # Weather API Key (optional)
 VITE_WEATHER_API_KEY=
@@ -34,11 +31,8 @@ VITE_MAPS_API_KEY=
 
 **Replace the empty values with your actual keys:**
 ```env
-# Google Gemini AI API Key
+# Google Gemini AI API Key (Required for Gemini Hackathon)
 VITE_GEMINI_API_KEY=AIzaSyBxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-# Unsplash API Key (for images)
-VITE_UNSPLASH_ACCESS_KEY=abc123xxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 # Weather API Key (optional)
 VITE_WEATHER_API_KEY=
@@ -56,19 +50,14 @@ After pasting your keys:
 
 ## 📍 Where to Get API Keys
 
-### Google Gemini API Key (Required)
+### Google Gemini API Key (Required for Gemini Hackathon)
 1. Go to: https://aistudio.google.com/app/apikey
 2. Sign in with Google account
 3. Click "Create API Key"
 4. Copy the key
 5. Paste it in `.env` file next to `VITE_GEMINI_API_KEY=`
 
-### Unsplash API Key (Optional - for farm images)
-1. Go to: https://unsplash.com/developers
-2. Register for free account
-3. Create new app
-4. Copy the "Access Key"
-5. Paste it in `.env` file next to `VITE_UNSPLASH_ACCESS_KEY=`
+**Note**: This project is built for the Gemini API Developer Competition, showcasing Gemini's vision capabilities for agricultural disease detection.
 
 ## ⚠️ Important Notes
 

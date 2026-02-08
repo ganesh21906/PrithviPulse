@@ -181,7 +181,7 @@ export const MyCropsView: React.FC<Props> = ({ onViewTimeline }) => {
               key={crop.id}
               className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:-translate-y-1 hover:shadow-lg transition-all cursor-pointer group"
             >
-              {/* Card Header with Crop Image from Unsplash */}
+              {/* Card Header with Crop Image */}
               <div className="relative h-32 bg-gradient-to-br from-green-50 to-emerald-50 overflow-hidden">
                 <img
                   src={cropImageUrl}
