@@ -1,7 +1,8 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { DiagnosisResult, CropAdvice } from "../types";
+import { API_KEYS } from "./api";
 
-const apiKey = import.meta.env.VITE_GEMINI_API_KEY || "";
+const apiKey = API_KEYS.gemini;
 const ai = apiKey ? new GoogleGenAI({ apiKey }) : null;
 
 const buildMockAdvisory = (soil: string, season: string): CropAdvice[] => [

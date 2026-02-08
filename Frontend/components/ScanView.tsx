@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { AlertCircle, CheckCircle, Zap, Droplet, Shield, Upload, Loader, ChevronLeft } from 'lucide-react';
 import { StepCard } from './StepCard';
 import { TreatmentTimeline } from './TreatmentTimeline';
+import { API_ENDPOINTS } from '../services/api';
 
 interface DiagnosisData {
   diagnosis_name: string;
@@ -55,7 +56,7 @@ export const ScanView: React.FC<ScanViewProps> = ({ onBack }) => {
       const formData = new FormData();
       formData.append('file', imageFile);
 
-      const response = await fetch('http://localhost:8000/scan_disease', {
+      const response = await fetch(API_ENDPOINTS.scanDisease, {
         method: 'POST',
         body: formData,
       });

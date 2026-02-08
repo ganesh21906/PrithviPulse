@@ -1,4 +1,5 @@
 import { DiagnosisResult, VisualAdvice } from "../types";
+import { API_ENDPOINTS, BASE_URL } from "./api";
 
 /**
  * Analyzes a leaf image using Gemini 3 Vision (Primary) or Local .h5 Model (Fallback)
@@ -15,7 +16,7 @@ export const analyzeLeafImageBackend = async (
     console.log("📤 Uploading image to backend...");
     console.log(`   File: ${imageFile.name} (${(imageFile.size / 1024).toFixed(2)} KB)`);
 
-    const response = await fetch("http://localhost:8000/scan_disease", {
+    const response = await fetch(API_ENDPOINTS.scanDisease, {
       method: "POST",
       body: formData
     });
@@ -144,7 +145,7 @@ export const analyzeLeafImageBackend = async (
       errorMessage = "Cannot connect to backend server";
       treatmentSteps = [
         "✓ Ensure backend is running: python main.py (in Backend folder)",
-        "✓ Check backend is on http://localhost:8000",
+        `✓ Check backend is on ${BASE_URL}`,
         "✓ Verify no firewall blocking port 8000",
         "✓ Try restarting both frontend and backend"
       ];
@@ -165,7 +166,7 @@ export const analyzeLeafImageBackend = async (
       treatmentSteps = [
         `Error: ${error.message || 'Unknown error occurred'}`,
         "Check browser console (F12) for more details",
-        "Ensure backend server is running at http://localhost:8000"
+        `Ensure backend server is running at ${BASE_URL}`
       ];
     }
 
@@ -213,7 +214,7 @@ export const getCropAdvisoryBackend = async (
   request: CropAdvisoryRequest
 ): Promise<CropAdvisoryResponse> => {
   try {
-    const response = await fetch("http://localhost:8000/advise-crop", {
+    const response = await fetch(`${BASE_URL}/advise-crop`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -290,7 +291,7 @@ export const getFarmPlanBackend = async (
   request: FarmPlanRequest
 ): Promise<FarmPlanResponse> => {
   try {
-    const response = await fetch("http://localhost:8000/farm-plan", {
+    const response = await fetch(`${BASE_URL}/farm-plan`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -381,7 +382,7 @@ export const getSmartPlanBackend = async (
   request: SmartPlanRequest
 ): Promise<SmartPlanResponse> => {
   try {
-    const response = await fetch("http://localhost:8000/generate-smart-plan", {
+    const response = await fetch(`${BASE_URL}/generate-smart-plan`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -471,7 +472,7 @@ export const getMarketTrendsBackend = async (
   region: string
 ): Promise<MarketTrendsResponse> => {
   try {
-    const response = await fetch("http://localhost:8000/get-market-trends", {
+    const response = await fetch(`${BASE_URL}/get-market-trends`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -553,7 +554,7 @@ export const getExecutionPlanBackend = async (
   request: ExecutionPlanRequest
 ): Promise<ExecutionPlanResponse> => {
   try {
-    const response = await fetch("http://localhost:8000/generate-execution-plan", {
+    const response = await fetch(`${BASE_URL}/generate-execution-plan`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
