@@ -1,0 +1,9 @@
+{
+  "name": "PrithviPulse Web",
+  "description": "AI-powered crop disease detection and smart advisory for farmers in India using Gemini API.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}

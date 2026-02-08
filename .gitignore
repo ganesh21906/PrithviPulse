@@ -1,0 +1,25 @@
+# Frontend
+Frontend/node_modules/
+Frontend/dist/
+Frontend/.env.local
+Frontend/.env.*.local
+
+# Backend
+Backend/__pycache__/
+Backend/*.pyc
+Backend/.env
+Backend/venv/
+Backend/.vscode/
+
+# System
+.DS_Store
+.env
+*.log
+.idea/
+
+# Root
+node_modules/
+dist/
+
+# Optional
+Zips/
