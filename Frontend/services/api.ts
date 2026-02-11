@@ -13,8 +13,9 @@ export const API_BASE_URLS = {
     frontend: 'http://localhost:3000'
   },
   production: {
-    backend: import.meta.env.VITE_BACKEND_URL || 'https://api.prithvipulse.com',
-    frontend: import.meta.env.VITE_FRONTEND_URL || 'https://prithvipulse.com'
+    // Format: https://username-space-prithvipulse.hf.space
+    backend: import.meta.env.VITE_BACKEND_URL || 'https://ganesh21906-prithvipulse.hf.space',
+    frontend: import.meta.env.VITE_FRONTEND_URL || 'https://your-vercel-domain.vercel.app'
   }
 } as const;
 
