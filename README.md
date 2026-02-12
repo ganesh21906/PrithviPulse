@@ -242,3 +242,4 @@ For issues and questions, please open an issue on GitHub.
 ---
 
 **Built with ❤️ for farmers worldwide**
+PrithviPulse is going to help Farmers
